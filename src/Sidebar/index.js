@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Heading } from 'grommet'
+import { Box } from 'grommet'
 import Logo from './Logo'
 import Section from './Section'
 
@@ -8,7 +8,7 @@ const Sidebar = ({ sections }) => {
   return (
     <Box fill="vertical" width="300px">
       <Logo />
-      <Box fill>
+      <Box style={{ display: 'block' }} fill>
         {sections.map(({ heading, links }) => (
           <Section heading={heading} links={links} />
         ))}

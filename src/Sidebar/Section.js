@@ -6,7 +6,7 @@ import Link from './Link'
 
 const Section = ({ heading, links }) => {
   return (
-    <Box margin={{ vertical: 'small' }} pad="small">
+    <Box margin={{ vertical: 'small' }} pad={{ vertical: 'small' }}>
       <Header heading={heading} />
       {links.map(({ title }) => (
         <Link title={title} />

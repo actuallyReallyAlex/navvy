@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Box, Button, Text } from 'grommet'
 import { Cube } from 'grommet-icons'
 
-const Link = ({ title }) => {
+const Link = ({ selected, title }) => {
   return (
     <Button hoverIndicator plain>
       <Box
@@ -14,6 +14,7 @@ const Link = ({ title }) => {
         margin="xsmall"
         pad="small"
       >
+        {selected && <Box background="blue" round="large" width="5px" />}
         <Cube />
         <Text>{title}</Text>
       </Box>
@@ -22,6 +23,7 @@ const Link = ({ title }) => {
 }
 
 Link.propTypes = {
+  selected: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired
 }
 
