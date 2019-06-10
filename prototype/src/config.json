@@ -1,0 +1,15 @@
+{
+  "servicing": {
+    "features": [
+      "claims",
+      "fraud",
+      "manageAE",
+      "redirectToAuthorizedUser",
+      "creditLimit"
+    ],
+    "paths": {
+      "authenticatedAppInfo": "C:\\RAD\\servicing_08_19\\ServicingAccountUI\\servicing-app-dev-api\\json\\authenticatedAppInfo.json"
+    }
+  },
+  "trancore": {}
+}
