@@ -3,15 +3,16 @@ import PropTypes from 'prop-types'
 import { Box } from 'grommet'
 import Logo from './Logo'
 import Section from './Section'
+import { Scrollbars } from 'react-custom-scrollbars'
 
 const Sidebar = ({ sections }) => {
   const firstLinkTitle = sections[0].links[0].title
   const [selected, setSelected] = useState(firstLinkTitle)
 
   return (
-    <Box fill="vertical" width="300px">
+    <Box background="light-3" fill="vertical" width="300px">
       <Logo />
-      <Box style={{ display: 'block' }} fill>
+      <Scrollbars autoHide>
         {sections.map(({ heading, links }) => (
           <Section
             heading={heading}
@@ -21,7 +22,7 @@ const Sidebar = ({ sections }) => {
             setSelected={setSelected}
           />
         ))}
-      </Box>
+      </Scrollbars>
     </Box>
   )
 }

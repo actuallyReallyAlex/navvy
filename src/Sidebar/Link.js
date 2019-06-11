@@ -14,11 +14,11 @@ const Link = ({ handler, selected, setSelected, title }) => {
     <Button hoverIndicator onClick={handleClick} plain>
       <Box
         direction="row"
-        fill="horizontal"
         height="45px"
-        margin="xsmall"
-        pad="small"
+        margin={{ vertical: 'xsmall', left: 'xsmall' }}
+        pad={{ vertical: 'small', left: 'small' }}
         style={{ position: 'relative' }}
+        width="95%"
       >
         {selected === title && <LinkIndicator />}
         <Box direction="row" gap="small">

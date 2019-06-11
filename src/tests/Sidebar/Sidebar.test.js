@@ -57,10 +57,6 @@ describe('<Sidebar />', () => {
     expect(component).toMatchSnapshot()
   })
 
-  test('Should be able to scroll within the sidebar itself, and not the body of the page.', () => {
-    throw new Error('The sidebar should be scrollable. Develop this.')
-  })
-
   test('Should be able to render in a "dark" mode as well.', () => {
     throw new Error('The sidebar should have a dark mode capability.')
   })

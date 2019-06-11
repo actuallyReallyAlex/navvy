@@ -1,10 +1,31 @@
 import React from 'react'
-import { Box, Heading } from 'grommet'
+import { Box } from 'grommet'
+import Search from './Search'
+import Notifications from './Notifications'
+import UserMenu from './UserMenu'
 
 const Navbar = () => {
   return (
-    <Box background="red" fill="horizontal">
-      <Heading color="white">Navbar</Heading>
+    <Box
+      direction="row"
+      fill="horizontal"
+      height="70px"
+      justify="between"
+      style={{ boxShadow: '0 4px 2px -2px gray' }}
+    >
+      <Box align="center" direction="row">
+      <Search />
+      </Box>
+      <Box
+        align="center"
+        direction="row"
+        justify="end"
+        pad={{ right: 'medium' }}
+        width="33%"
+      >
+        <Notifications />
+        <UserMenu />
+      </Box>
     </Box>
   )
 }
