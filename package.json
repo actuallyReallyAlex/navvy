@@ -28,6 +28,7 @@
     "grommet": "^2.7.1",
     "grommet-icons": "^4.2.0",
     "react": "^16.8.6",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.8.6",
     "styled-components": "^4.3.1"
   },
