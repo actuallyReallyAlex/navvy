@@ -5,12 +5,12 @@ import Logo from './Logo'
 import Section from './Section'
 import { Scrollbars } from 'react-custom-scrollbars'
 
-const Sidebar = ({ sections }) => {
+const Sidebar = ({ background, sections }) => {
   const firstLinkTitle = sections[0].links[0].title
   const [selected, setSelected] = useState(firstLinkTitle)
 
   return (
-    <Box background="light-3" fill="vertical" width="300px">
+    <Box background={`${background}-3`} fill="vertical" width="300px">
       <Logo />
       <Scrollbars autoHide>
         {sections.map(({ heading, links }) => (
@@ -28,6 +28,7 @@ const Sidebar = ({ sections }) => {
 }
 
 Sidebar.propTypes = {
+  background: PropTypes.oneOf(['dark', 'light']),
   sections: PropTypes.array.isRequired
 }
 

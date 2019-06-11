@@ -5,12 +5,12 @@ import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 
 const Navvy = props => {
-  const { sections } = props
+  const { background, sections } = props
 
   return (
     <Grommet full theme={grommet}>
       <Box direction="row" fill>
-        <Sidebar sections={sections} />
+        <Sidebar background={background} sections={sections} />
         <Box fill>
           <Navbar />
           {props.children}
@@ -21,7 +21,12 @@ const Navvy = props => {
 }
 
 Navvy.propTypes = {
+  background: PropTypes.oneOf(['dark', 'light']),
   sections: PropTypes.array.isRequired
+}
+
+Navvy.defaultProps = {
+  background: 'light'
 }
 
 export default Navvy

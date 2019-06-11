@@ -49,6 +49,16 @@ describe('<Sidebar />', () => {
     expect(component).toMatchSnapshot()
   })
 
+  test('Should be able to render in "light" mode.', () => {
+    const component = shallow(<Sidebar {...defaultProps} background="light" />)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('Should be able to render in "dark" mode.', () => {
+    const component = shallow(<Sidebar {...defaultProps} background="dark" />)
+    expect(component).toMatchSnapshot()
+  })
+
   test('Should have the ability to collapse the sidebar.', () => {
     const component = shallow(<Sidebar {...defaultProps} />)
     const collapseButton = component.find('collapse-button-selector')
@@ -57,9 +67,7 @@ describe('<Sidebar />', () => {
     expect(component).toMatchSnapshot()
   })
 
-  test('Should be able to render in a "dark" mode as well.', () => {
-    throw new Error('The sidebar should have a dark mode capability.')
-  })
+
 
   test('Should be able to render any icon from "grommet-icons".', () => {
     throw new Error('The sidebar should be able to render any icon.')
