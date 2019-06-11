@@ -12,7 +12,10 @@ storiesOf('Navvy', module).add('Basic', () => (
         heading: 'Navigation',
         links: [
           { title: 'Dashboard' },
-          { title: 'Page layouts' },
+          {
+            title: 'Page layouts',
+            handler: () => console.log('LOL')
+          },
           { title: 'Navigation' },
           { title: 'Widget' }
         ]
