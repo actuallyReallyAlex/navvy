@@ -7,7 +7,7 @@
 
 <div align="center">
 
-[![NPM Version][npm-image]][npm-url] [![NPM Total Downloads][npm-downloads]][npm-url] [![npm bundle size (minified + gzip)][size-image]][npm-url][![Coverage Status](https://coveralls.io/repos/github/alexlee-dev/navvy/badge.svg?branch=master)](https://coveralls.io/github/alexlee-dev/navvy?branch=master)[![Build Status](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)
+[![NPM Version][npm-image]][npm-url]   [![NPM Total Downloads][npm-downloads]][npm-url]   [![npm bundle size (minified + gzip)][size-image]][npm-url]   [![Coverage Status](https://coveralls.io/repos/github/alexlee-dev/navvy/badge.svg?branch=master)](https://coveralls.io/github/alexlee-dev/navvy?branch=master)   [![Build Status](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)
 
 </div>
 
