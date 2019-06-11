@@ -1,12 +1,13 @@
 import React from 'react'
 import { Box, Menu, Text } from 'grommet'
 import { MailOption, Notification, Server } from 'grommet-icons'
+import { useHover } from '../hooks/useHover'
 
 const NavbarNotifications = () => {
-  const notificationIsHovered = false; // ! Fix this
+  const [hoverRef, notificationIsHovered] = useHover()
 
   return (
-    <Box margin={{ horizontal: 'small' }}>
+    <Box margin={{ horizontal: 'small' }} ref={hoverRef}>
       <Menu
         dropAlign={{ top: 'bottom', right: 'right' }}
         icon={
