@@ -4,6 +4,7 @@ import { Search } from 'grommet-icons'
 
 const NavbarSearch = () => {
   const [searchValue, setSearchValue] = useState('')
+  const handleChange = e => setSearchValue(e.target.value)
   
   return (
     <Fragment>
@@ -13,7 +14,7 @@ const NavbarSearch = () => {
       <Box align="center" direction="row" gap="small" width="50%">
         <TextInput
           margin
-          onChange={e => setSearchValue(e.target.value)}
+          onChange={handleChange}
           placeholder="Search..."
           plain
           size="small"
