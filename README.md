@@ -7,7 +7,7 @@
 
 <div align="center">
 
-[![NPM Version][npm-image]][npm-url]   [![NPM Total Downloads][npm-downloads]][npm-url]   [![npm bundle size (minified + gzip)][size-image]][npm-url]   [![Coverage Status](https://coveralls.io/repos/github/alexlee-dev/navvy/badge.svg?branch=master)](https://coveralls.io/github/alexlee-dev/navvy?branch=master)   [![Build Status](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)
+[![NPM Version][npm-image]][npm-url] [![NPM Total Downloads][npm-downloads]][npm-url] [![npm bundle size (minified + gzip)][size-image]][npm-url] [![Coverage Status](https://coveralls.io/repos/github/alexlee-dev/navvy/badge.svg?branch=master)](https://coveralls.io/github/alexlee-dev/navvy?branch=master) [![Build Status](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)
 
 </div>
 
@@ -16,7 +16,7 @@
 <p align="center"> A React Navbar/Sidebar combo component.
     <br> 
 </p>
-<!-- ## 📝 Table of Contents
+## 📝 Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
@@ -30,65 +30,79 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Navvy serves as a simple to use navbar/sidebar combo component. A fully featured navbar/sidebar is a common aspect of many dashboards and other websites; Navvy makes it easy to implement one on your own.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+## 📦 Installing
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+### NPM
 
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-```
-Give examples
+```sh
+npm install navvy
 ```
 
-### Installing
+### Yarn
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```sh
+yarn add navvy
 ```
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+```js
+import React from 'react'
+import Navvy from 'navvy'
 
-## 🚀 Deployment <a name = "deployment"></a>
+const App = () => {
+  return (
+    <Navvy
+      sections={[
+        {
+          heading: 'Navigation',
+          links: [
+            {
+              title: 'Dashboard'
+            },
+            {
+              title: 'Page layouts'
+            },
+            {
+              title: 'Navigation'
+            },
+            {
+              title: 'Widget'
+            }
+          ]
+        },
+        {
+          heading: 'UI Element',
+          links: [
+            {
+              title: 'Basic'
+            },
+            {
+              title: 'Advance'
+            },
+            {
+              title: 'Extra'
+            },
+            {
+              title: 'Animations'
+            },
+            {
+              title: 'Icons'
+            }
+          ]
+        }
+      ]}
+    >
+      <h1>thing 1</h1>
+      <h1>thing 2</h1>
+    </Navvy>
+  )
+}
 
-Add additional notes about how to deploy this on a live system. -->
+export default App
+```
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -98,16 +112,10 @@ Add additional notes about how to deploy this on a live system. -->
 ## ✍️ Author <a name = "author"></a>
 
 - [Alex Lee](https://github.com/alexlee-dev) - Developer
-<!-- 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project. -->
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - Icon made by [Nikita Golubev](https://www.flaticon.com/authors/nikita-golubev) from [www.flaticon.com](https://www.flaticon.com/) and is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
-
-<!-- - Hat tip to anyone whose code was used
-- Inspiration
-- References -->
 
 [npm-image]: https://img.shields.io/npm/v/navvy.svg
 [npm-downloads]: https://img.shields.io/npm/dt/navvy.svg
