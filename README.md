@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=256px height=256px src="https://github.com/alexlee-dev/navvy/raw/master/navvy.png" alt="Navvy logo"></a>
 </p>
 
 <h3 align="center">Navvy</h3>
@@ -16,8 +16,7 @@
 <p align="center"> A React Navbar/Sidebar combo component.
     <br> 
 </p>
-<!-- 
-## 📝 Table of Contents
+<!-- ## 📝 Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
@@ -26,7 +25,7 @@
 - [Built Using](#built_using)
 - [TODO](../TODO.md)
 - [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
+- [Author](#author)
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
@@ -89,24 +88,24 @@ Add notes about how to use the system.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+Add additional notes about how to deploy this on a live system. -->
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Grommet](https://v2.grommet.io/) - UI Framework
+- [React](https://reactjs.org/) - UI Framework
 
-## ✍️ Authors <a name = "authors"></a>
+## ✍️ Author <a name = "author"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+- [Alex Lee](https://github.com/alexlee-dev) - Developer
+<!-- 
+See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project. -->
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
+- Icon made by [Nikita Golubev](https://www.flaticon.com/authors/nikita-golubev) from [www.flaticon.com](https://www.flaticon.com/) and is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
+
+<!-- - Hat tip to anyone whose code was used
 - Inspiration
 - References -->
 
@@ -114,3 +113,4 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 [npm-downloads]: https://img.shields.io/npm/dt/navvy.svg
 [npm-url]: https://www.npmjs.com/package/navvy
 [size-image]: https://img.shields.io/bundlephobia/minzip/navvy.svg
+[navvy-icon]: https://github.com/alexlee-dev/navvy/raw/master/navvy.png
