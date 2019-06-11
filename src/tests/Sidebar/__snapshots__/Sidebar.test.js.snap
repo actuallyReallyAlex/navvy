@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Sidebar /> Should have the ability to collapse the sidebar. 1`] = `ShallowWrapper {}`;
+
 exports[`<Sidebar /> Should render the <Sidebar /> component. 1`] = `ShallowWrapper {}`;

@@ -37,4 +37,8 @@ describe('<Link />', () => {
     component.find('WithTheme(Button)').simulate('click')
     expect(defaultProps.handler).toHaveBeenCalled()
   })
+
+  test('Should render a collapsable link.', () => {
+    const component = shallow(<Link {...collapsableProps} />)
+  })
 })
