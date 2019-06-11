@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notifications /> Should render the <Notifications /> component. 1`] = `ShallowWrapper {}`;
