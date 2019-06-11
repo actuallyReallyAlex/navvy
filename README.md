@@ -16,23 +16,21 @@
 <p align="center"> A React Navbar/Sidebar combo component.
     <br> 
 </p>
+
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Installing](#installing)
 - [Usage](#usage)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Author](#author)
 - [Acknowledgments](#acknowledgement)
 
-## 🧐 About <a name = "about"></a>
+## 🧐 About <a name="about"></a>
 
 Navvy serves as a simple to use navbar/sidebar combo component. A fully featured navbar/sidebar is a common aspect of many dashboards and other websites; Navvy makes it easy to implement one on your own.
 
-## 📦 Installing
+## 📦 Installing <a name="installing"></a>
 
 ### NPM
 
@@ -109,7 +107,7 @@ export default App
 - [Grommet](https://v2.grommet.io/) - UI Framework
 - [React](https://reactjs.org/) - UI Framework
 
-## ✍️ Author <a name = "author"></a>
+## ✍️ Author <a name="author"></a>
 
 - [Alex Lee](https://github.com/alexlee-dev) - Developer
 
