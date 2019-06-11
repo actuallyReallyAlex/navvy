@@ -7,9 +7,7 @@ import LinkIndicator from './LinkIndicator'
 const Link = ({ handler, selected, setSelected, title }) => {
   const handleClick = () => {
     setSelected(title)
-    if (handler) {
-      handler()
-    }
+    handler && handler()
   }
 
   return (
