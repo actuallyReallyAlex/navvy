@@ -4,7 +4,7 @@ import { Box, Button, Text } from 'grommet'
 import LinkIndicator from './LinkIndicator'
 import LinkIcon from './LinkIcon'
 
-const Link = ({ handler, icon, selected, setSelected, title }) => {
+const Link = ({ handler, icon, selected, setSelected, size, title }) => {
   const handleClick = () => {
     setSelected(title)
     handler && handler()
@@ -21,9 +21,15 @@ const Link = ({ handler, icon, selected, setSelected, title }) => {
         width="95%"
       >
         {selected === title && <LinkIndicator />}
-        <Box direction="row" gap="small">
+        <Box
+          align="center"
+          direction="row"
+          gap="small"
+          justify={size === 'expanded' ? 'start' : 'center'}
+          width={size === 'expanded' ? '100%' : '75%'}
+        >
           <LinkIcon icon={icon} />
-          <Text>{title}</Text>
+          {size === 'expanded' && <Text>{title}</Text>}
         </Box>
       </Box>
     </Button>
@@ -35,6 +41,7 @@ Link.propTypes = {
   icon: PropTypes.string,
   selected: PropTypes.string.isRequired,
   setSelected: PropTypes.func.isRequired,
+  size: PropTypes.oneOf(['expanded', 'collapsed']).isRequired,
   title: PropTypes.string.isRequired
 }
 

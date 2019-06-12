@@ -4,10 +4,10 @@ import { Box } from 'grommet'
 import Header from './Header'
 import Link from './Link'
 
-const Section = ({ heading, links, selected, setSelected }) => {
+const Section = ({ heading, links, selected, setSelected, size }) => {
   return (
     <Box margin={{ vertical: 'small' }} pad={{ vertical: 'small' }}>
-      <Header heading={heading} />
+      <Header heading={heading} size={size} />
       {links.map(({ handler, icon, title }, i) => (
         <Link
           handler={handler}
@@ -15,6 +15,7 @@ const Section = ({ heading, links, selected, setSelected }) => {
           key={i}
           selected={selected}
           setSelected={setSelected}
+          size={size}
           title={title}
         />
       ))}
@@ -26,7 +27,8 @@ Section.propTypes = {
   heading: PropTypes.string.isRequired,
   links: PropTypes.array.isRequired,
   selected: PropTypes.string.isRequired,
-  setSelected: PropTypes.func.isRequired
+  setSelected: PropTypes.func.isRequired,
+  size: PropTypes.oneOf(['expanded', 'collapsed'])
 }
 
 export default Section

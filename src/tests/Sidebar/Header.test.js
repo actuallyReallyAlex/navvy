@@ -3,7 +3,8 @@ import Header from '../../Sidebar/Header'
 import { shallow } from 'enzyme'
 
 const defaultProps = {
-  heading: 'Heading'
+  heading: 'Heading',
+  size: 'expanded'
 }
 
 describe('<Header />', () => {

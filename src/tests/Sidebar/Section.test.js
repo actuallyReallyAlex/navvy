@@ -12,7 +12,8 @@ const defaultProps = {
     { title: 'Form Wizard' }
   ],
   selected: 'Other',
-  setSelected: jest.fn()
+  setSelected: jest.fn(),
+  size: 'expanded'
 }
 
 describe('<Section />', () => {

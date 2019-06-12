@@ -4,6 +4,4 @@ exports[`<Sidebar /> Should be able to render in "dark" mode. 1`] = `ShallowWrap
 
 exports[`<Sidebar /> Should be able to render in "light" mode. 1`] = `ShallowWrapper {}`;
 
-exports[`<Sidebar /> Should have the ability to collapse the sidebar. 1`] = `ShallowWrapper {}`;
-
 exports[`<Sidebar /> Should render the <Sidebar /> component. 1`] = `ShallowWrapper {}`;

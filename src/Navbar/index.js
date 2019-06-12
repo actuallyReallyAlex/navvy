@@ -1,10 +1,21 @@
 import React from 'react'
-import { Box } from 'grommet'
+import PropTypes from 'prop-types'
+import { Box, Button } from 'grommet'
+import { Next, Previous } from 'grommet-icons'
 import Search from './Search'
 import Notifications from './Notifications'
 import UserMenu from './UserMenu'
 
-const Navbar = () => {
+const Navbar = ({ setSize, size }) => {
+  const sizeIcons = {
+    expanded: <Previous />,
+    collapsed: <Next />
+  }
+
+  const handleExpanderClick = () => {
+    setSize(size === 'expanded' ? 'collapsed' : 'expanded')
+  }
+
   return (
     <Box
       direction="row"
@@ -13,8 +24,16 @@ const Navbar = () => {
       justify="between"
       style={{ boxShadow: '0 4px 2px -2px gray' }}
     >
-      <Box align="center" direction="row">
-      <Search />
+      <Box align="center" justify="center" pad={{ horizontal: 'medium' }}>
+        <Button
+          hoverIndicator
+          icon={sizeIcons[size]}
+          onClick={handleExpanderClick}
+          plain
+        />
+      </Box>
+      <Box align="center" direction="row" width="55%">
+        <Search />
       </Box>
       <Box
         align="center"
@@ -28,6 +47,11 @@ const Navbar = () => {
       </Box>
     </Box>
   )
+}
+
+Navbar.propTypes = {
+  setSize: PropTypes.func.isRequired,
+  size: PropTypes.oneOf(['expanded', 'collapsed']).isRequired
 }
 
 export default Navbar

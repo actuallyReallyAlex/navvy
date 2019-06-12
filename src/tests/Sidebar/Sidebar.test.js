@@ -36,7 +36,8 @@ const defaultProps = {
         { title: 'Form Wizard' }
       ]
     }
-  ]
+  ],
+  size: 'expanded'
 }
 
 describe('<Sidebar />', () => {
@@ -56,14 +57,6 @@ describe('<Sidebar />', () => {
 
   test('Should be able to render in "dark" mode.', () => {
     const component = shallow(<Sidebar {...defaultProps} background="dark" />)
-    expect(component).toMatchSnapshot()
-  })
-
-  test('Should have the ability to collapse the sidebar.', () => {
-    const component = shallow(<Sidebar {...defaultProps} />)
-    const collapseButton = component.find('collapse-button-selector')
-    expect(component).toMatchSnapshot()
-    collapseButton.simulate('click')
     expect(component).toMatchSnapshot()
   })
 })

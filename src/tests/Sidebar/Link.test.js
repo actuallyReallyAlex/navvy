@@ -6,6 +6,7 @@ const defaultProps = {
   handler: jest.fn(),
   selected: 'Title',
   setSelected: jest.fn(),
+  size: 'expanded',
   title: 'Title'
 }
 
@@ -13,6 +14,7 @@ const nonSelectedLinkProps = {
   handler: jest.fn(),
   selected: 'NA',
   setSelected: jest.fn(),
+  size: 'expanded',
   title: 'Title'
 }
 
