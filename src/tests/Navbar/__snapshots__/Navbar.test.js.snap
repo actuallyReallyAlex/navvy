@@ -6,6 +6,8 @@ exports[`<Navbar /> Should have the ability to collapse the sidebar. 2`] = `Shal
 
 exports[`<Navbar /> Should have the ability to expand the sidebar. 1`] = `ShallowWrapper {}`;
 
+exports[`<Navbar /> Should have the ability to expand the sidebar. 2`] = `ShallowWrapper {}`;
+
 exports[`<Navbar /> Should render the <Navbar /> component with sidebar collapsed. 1`] = `ShallowWrapper {}`;
 
 exports[`<Navbar /> Should render the <Navbar /> component with sidebar expanded. 1`] = `ShallowWrapper {}`;

@@ -1,19 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Box, Button } from 'grommet'
-import { Next, Previous } from 'grommet-icons'
+import { Close, Expand, Next, Previous } from 'grommet-icons'
 import Search from './Search'
 import Notifications from './Notifications'
 import UserMenu from './UserMenu'
 
 const Navbar = ({ setSize, size }) => {
+  const [fullScreen, setFullScreen] = useState(false)
+
   const sizeIcons = {
     expanded: <Previous />,
     collapsed: <Next />
   }
 
+  const fullScreenIcons = {
+    true: <Close />,
+    false: <Expand />
+  }
+
   const handleExpanderClick = () => {
     setSize(size === 'expanded' ? 'collapsed' : 'expanded')
+  }
+
+  const handleToggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen()
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen()
+      }
+    }
+    setFullScreen(!fullScreen)
   }
 
   return (
@@ -29,6 +47,14 @@ const Navbar = ({ setSize, size }) => {
           hoverIndicator
           icon={sizeIcons[size]}
           onClick={handleExpanderClick}
+          plain
+        />
+      </Box>
+      <Box align="center" justify="center">
+        <Button
+          hoverIndicator
+          icon={fullScreenIcons[fullScreen]}
+          onClick={handleToggleFullScreen}
           plain
         />
       </Box>
