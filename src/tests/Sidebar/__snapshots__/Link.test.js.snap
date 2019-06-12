@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Link /> Should render a collapsable link. 1`] = `ShallowWrapper {}`;
+
 exports[`<Link /> Should render a non-selected Link. 1`] = `ShallowWrapper {}`;
 
 exports[`<Link /> Should render a selected Link with sidebar collapsed. 1`] = `ShallowWrapper {}`;

@@ -3,6 +3,16 @@ import Link from '../../Sidebar/Link'
 import { shallow } from 'enzyme'
 
 const defaultProps = {
+  collapsible: false,
+  handler: jest.fn(),
+  selected: 'Title',
+  setSelected: jest.fn(),
+  title: 'Title'
+}
+
+const collapsibleProps = {
+  children: [{ icon: 'Cube', title: 'Child 1' }],
+  collapsible: true,
   handler: jest.fn(),
   selected: 'Title',
   setSelected: jest.fn(),
@@ -10,6 +20,7 @@ const defaultProps = {
 }
 
 const nonSelectedLinkProps = {
+  collapsible: false,
   handler: jest.fn(),
   selected: 'NA',
   setSelected: jest.fn(),
@@ -19,6 +30,11 @@ const nonSelectedLinkProps = {
 describe('<Link />', () => {
   afterEach(() => {
     defaultProps.handler.mockClear()
+    defaultProps.setSelected.mockClear()
+    collapsibleProps.handler.mockClear()
+    collapsibleProps.setSelected.mockClear()
+    nonSelectedLinkProps.handler.mockClear()
+    nonSelectedLinkProps.setSelected.mockClear()
   })
 
   test('Should render a selected Link with sidebar expanded.', () => {
@@ -38,14 +54,8 @@ describe('<Link />', () => {
     expect(component).toMatchSnapshot()
   })
 
-  test('Should call the link handler if the link is clicked.', () => {
-    const component = shallow(<Link {...defaultProps} size="expanded" />)
-    expect(defaultProps.handler).not.toHaveBeenCalled()
-    component.find('WithTheme(Button)').simulate('click')
-    expect(defaultProps.handler).toHaveBeenCalled()
-  })
-
   test('Should render a collapsable link.', () => {
-    const component = shallow(<Link {...collapsableProps} size="expanded" />)
+    const component = shallow(<Link {...collapsibleProps} size="expanded" />)
+    expect(component).toMatchSnapshot()
   })
 })
