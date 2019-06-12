@@ -56,7 +56,7 @@ const LinkCollapsible = ({
         </Box>
       </Button>
       {expanded &&
-        children.map(({ handler, icon, size, title }, i) => (
+        children.map(({ handler, icon, title }, i) => (
           <LinkCollapsibleChild
             handler={handler}
             key={i}

@@ -23,12 +23,11 @@ describe('<LinkCollapsible />', () => {
     expect(component).toMatchSnapshot()
   })
 
-//   test.only('Should call the link handler if the link is clicked.', () => {
-//     const component = shallow(<Link {...defaultProps} size="expanded" />)
-//     console.log(component.debug())
-//     console.log(component.find('LinkStandard').debug())
-//     expect(defaultProps.handler).not.toHaveBeenCalled()
-//     component.find('LinkStandard').simulate('click')
-//     expect(defaultProps.handler).toHaveBeenCalled()
-//   })
+  test('Should call the link handler if the link is clicked.', () => {
+    const component = shallow(<LinkCollapsible {...defaultProps} />)
+    expect(defaultProps.handler).toHaveBeenCalledTimes(0)
+    component.find('WithTheme(Button)').simulate('click')
+    expect(component).toMatchSnapshot()
+    expect(defaultProps.handler).toHaveBeenCalledTimes(1)
+  })
 })

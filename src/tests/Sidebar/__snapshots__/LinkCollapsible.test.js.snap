@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<LinkCollapsible /> Should call the link handler if the link is clicked. 1`] = `ShallowWrapper {}`;
+
 exports[`<LinkCollapsible /> Should render the <LinkCollapsible /> component. 1`] = `ShallowWrapper {}`;
