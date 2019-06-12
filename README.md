@@ -108,7 +108,7 @@ export default App
 - [Grommet](https://v2.grommet.io/) - UI Framework
 - [React](https://reactjs.org/) - UI Framework
 
-## TODO
+## ✏️ TODO
 
 - [x] Basic Skeleton.
 - [x] Ability to collapse/expand sidebar.
