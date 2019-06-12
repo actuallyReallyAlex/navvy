@@ -8,8 +8,10 @@ const Section = ({ heading, links, selected, setSelected, size }) => {
   return (
     <Box margin={{ vertical: 'small' }} pad={{ vertical: 'small' }}>
       <Header heading={heading} size={size} />
-      {links.map(({ handler, icon, title }, i) => (
+      {links.map(({ collapsible, children, handler, icon, title }, i) => (
         <Link
+          collapsible={collapsible}
+          children={children}
           handler={handler}
           icon={icon}
           key={i}

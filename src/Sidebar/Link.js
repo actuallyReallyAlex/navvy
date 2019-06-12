@@ -1,42 +1,49 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Button, Text } from 'grommet'
-import LinkIndicator from './LinkIndicator'
-import LinkIcon from './LinkIcon'
+import LinkStandard from './LinkStandard'
+import LinkCollapsible from './LinkCollapsible'
 
-const Link = ({ handler, icon, selected, setSelected, size, title }) => {
-  const handleClick = () => {
-    setSelected(title)
-    handler && handler()
+const Link = ({
+  collapsible = false,
+  children,
+  handler,
+  icon,
+  selected,
+  setSelected,
+  size,
+  title
+}) => {
+  if (collapsible) {
+    return (
+      <LinkCollapsible
+        collapsible={collapsible}
+        children={children}
+        handler={handler}
+        icon={icon}
+        selected={selected}
+        setSelected={setSelected}
+        size={size}
+        title={title}
+      />
+    )
+  } else {
+    return (
+      <LinkStandard
+        collapsible={collapsible}
+        handler={handler}
+        icon={icon}
+        selected={selected}
+        setSelected={setSelected}
+        size={size}
+        title={title}
+      />
+    )
   }
-
-  return (
-    <Button hoverIndicator onClick={handleClick} plain>
-      <Box
-        direction="row"
-        height="45px"
-        margin={{ vertical: 'xsmall', left: 'xsmall' }}
-        pad={{ vertical: 'small', left: 'small' }}
-        style={{ position: 'relative' }}
-        width="95%"
-      >
-        {selected === title && <LinkIndicator />}
-        <Box
-          align="center"
-          direction="row"
-          gap="small"
-          justify={size === 'expanded' ? 'start' : 'center'}
-          width={size === 'expanded' ? '100%' : '75%'}
-        >
-          <LinkIcon icon={icon} />
-          {size === 'expanded' && <Text>{title}</Text>}
-        </Box>
-      </Box>
-    </Button>
-  )
 }
 
 Link.propTypes = {
+  children: PropTypes.array,
+  collapsible: PropTypes.bool,
   handler: PropTypes.func,
   icon: PropTypes.string,
   selected: PropTypes.string.isRequired,
@@ -46,6 +53,7 @@ Link.propTypes = {
 }
 
 Link.defaultProps = {
+  collapsible: false,
   icon: 'FormSubtract'
 }
 

@@ -11,7 +11,21 @@ storiesOf('Navvy', module).add('Basic', () => (
       {
         heading: 'Navigation',
         links: [
-          { icon: 'Dashboard', title: 'Dashboard' },
+          {
+            collapsible: true,
+            children: [
+              {
+                icon: 'Cube',
+                title: 'Child 1'
+              },
+              {
+                icon: 'Cubes',
+                title: 'Child 2'
+              }
+            ],
+            icon: 'Dashboard',
+            title: 'Dashboard'
+          },
           {
             icon: 'Template',
             title: 'Page layouts',
