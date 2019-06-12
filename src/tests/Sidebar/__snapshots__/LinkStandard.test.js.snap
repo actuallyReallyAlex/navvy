@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LinkStandard /> Should render the <LinkStandard /> component. 1`] = `ShallowWrapper {}`;
+exports[`<LinkStandard /> Should render the <LinkStandard /> component as a non-selected Link with sidebar collapsed. 1`] = `ShallowWrapper {}`;
+
+exports[`<LinkStandard /> Should render the <LinkStandard /> component as a non-selected Link with sidebar expanded. 1`] = `ShallowWrapper {}`;
+
+exports[`<LinkStandard /> Should render the <LinkStandard /> component as a selected Link with sidebar collapsed. 1`] = `ShallowWrapper {}`;
+
+exports[`<LinkStandard /> Should render the <LinkStandard /> component as a selected Link with sidebar expanded. 1`] = `ShallowWrapper {}`;
