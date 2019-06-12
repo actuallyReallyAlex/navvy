@@ -23,6 +23,7 @@
 - [Installing](#installing)
 - [Usage](#usage)
 - [Built Using](#built_using)
+- [Todo](#todo)
 - [Author](#author)
 - [Acknowledgments](#acknowledgement)
 
@@ -106,6 +107,17 @@ export default App
 
 - [Grommet](https://v2.grommet.io/) - UI Framework
 - [React](https://reactjs.org/) - UI Framework
+
+## TODO
+
+- [x] Basic Skeleton.
+- [x] Ability to collapse/expand sidebar.
+- [x] Ability to make fullscreen.
+- [x] Ability to render collapsible links.
+- [ ] Dark/Light Modes.
+- [ ] Ability to render custom Logos.
+- [ ] Ability to hook into Notifications.
+- [ ] Ability to hook into Settings.
 
 ## ✍️ Author <a name="author"></a>
 
