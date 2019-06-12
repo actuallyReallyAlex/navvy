@@ -32,4 +32,14 @@ describe('<Navbar />', () => {
     expect(component).toMatchSnapshot()
     expect(defaultProps.setSize).toHaveBeenCalledTimes(1)
   })
+
+  test('Should have the ability to expand the sidebar.', () => {
+    const component = shallow(<Navbar {...defaultProps} size="collapsed" />)
+    const expandButton = component.find('WithTheme(Button)')
+    expect(component).toMatchSnapshot()
+    expect(defaultProps.setSize).not.toHaveBeenCalled()
+    expandButton.simulate('click')
+    expect(component).toMatchSnapshot()
+    expect(defaultProps.setSize).toHaveBeenCalledTimes(1)
+  })
 })

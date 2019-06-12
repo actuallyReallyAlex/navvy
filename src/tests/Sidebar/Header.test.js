@@ -17,7 +17,7 @@ describe('<Header />', () => {
   })
 
   test('Should render the <Header /> component with sidebar collapsed.', () => {
-    const component = shallow(<Header {...defaultProps} size="expanded" />)
+    const component = shallow(<Header {...defaultProps} size="collapsed" />)
     expect(component).toMatchSnapshot()
   })
 })
