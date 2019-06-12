@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Logo /> Should render the <Logo /> component. 1`] = `ShallowWrapper {}`;
+exports[`<Logo /> Should render the <Logo /> component with sidebar collapsed. 1`] = `ShallowWrapper {}`;
+
+exports[`<Logo /> Should render the <Logo /> component with sidebar expanded. 1`] = `ShallowWrapper {}`;

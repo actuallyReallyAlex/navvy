@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Header /> Should render the <Header /> component. 1`] = `ShallowWrapper {}`;
+exports[`<Header /> Should render the <Header /> component with sidebar collapsed. 1`] = `ShallowWrapper {}`;
+
+exports[`<Header /> Should render the <Header /> component with sidebar expanded. 1`] = `ShallowWrapper {}`;

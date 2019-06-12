@@ -3,8 +3,7 @@ import Header from '../../Sidebar/Header'
 import { shallow } from 'enzyme'
 
 const defaultProps = {
-  heading: 'Heading',
-  size: 'expanded'
+  heading: 'Heading'
 }
 
 describe('<Header />', () => {
@@ -12,8 +11,13 @@ describe('<Header />', () => {
     // defaultProps.handler.mockClear()
   })
 
-  test('Should render the <Header /> component.', () => {
-    const component = shallow(<Header {...defaultProps} />)
+  test('Should render the <Header /> component with sidebar expanded.', () => {
+    const component = shallow(<Header {...defaultProps} size="expanded" />)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('Should render the <Header /> component with sidebar collapsed.', () => {
+    const component = shallow(<Header {...defaultProps} size="expanded" />)
     expect(component).toMatchSnapshot()
   })
 })

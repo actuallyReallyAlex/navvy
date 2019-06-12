@@ -3,15 +3,19 @@ import Navbar from '../../Navbar/index'
 import { shallow } from 'enzyme'
 
 const defaultProps = {
-  setSize: jest.fn(),
-  size: 'expanded'
+  setSize: jest.fn()
 }
 
 describe('<Navbar />', () => {
   afterEach(() => {})
 
-  test('Should render the <Navbar /> component.', () => {
-    const component = shallow(<Navbar {...defaultProps} />)
+  test('Should render the <Navbar /> component with sidebar expanded.', () => {
+    const component = shallow(<Navbar {...defaultProps} size="expanded" />)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('Should render the <Navbar /> component with sidebar collapsed.', () => {
+    const component = shallow(<Navbar {...defaultProps} size="collapsed" />)
     expect(component).toMatchSnapshot()
   })
 
@@ -20,7 +24,7 @@ describe('<Navbar />', () => {
   })
 
   test('Should have the ability to collapse the sidebar.', () => {
-    const component = shallow(<Navbar {...defaultProps} />)
+    const component = shallow(<Navbar {...defaultProps} size="expanded" />)
     const collapseButton = component.find('WithTheme(Button)')
     expect(component).toMatchSnapshot()
     expect(defaultProps.setSize).not.toHaveBeenCalled()

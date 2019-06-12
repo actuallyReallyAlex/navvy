@@ -23,7 +23,7 @@ const Logo = ({ size }) => {
 }
 
 Logo.propTypes = {
-  size: PropTypes.oneOf(['expanded', 'collapsed'])
+  size: PropTypes.oneOf(['expanded', 'collapsed']).isRequired
 }
 
 export default Logo
