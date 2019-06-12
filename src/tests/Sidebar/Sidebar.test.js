@@ -66,10 +66,4 @@ describe('<Sidebar />', () => {
     collapseButton.simulate('click')
     expect(component).toMatchSnapshot()
   })
-
-
-
-  test('Should be able to render any icon from "grommet-icons".', () => {
-    throw new Error('The sidebar should be able to render any icon.')
-  })
 })

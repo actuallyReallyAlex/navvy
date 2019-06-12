@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Button, Text } from 'grommet'
-import { Cube } from 'grommet-icons'
 import LinkIndicator from './LinkIndicator'
+import LinkIcon from './LinkIcon'
 
-const Link = ({ handler, selected, setSelected, title }) => {
+const Link = ({ handler, icon, selected, setSelected, title }) => {
   const handleClick = () => {
     setSelected(title)
     handler && handler()
@@ -22,7 +22,7 @@ const Link = ({ handler, selected, setSelected, title }) => {
       >
         {selected === title && <LinkIndicator />}
         <Box direction="row" gap="small">
-          <Cube />
+          <LinkIcon icon={icon} />
           <Text>{title}</Text>
         </Box>
       </Box>
@@ -32,9 +32,14 @@ const Link = ({ handler, selected, setSelected, title }) => {
 
 Link.propTypes = {
   handler: PropTypes.func,
+  icon: PropTypes.string,
   selected: PropTypes.string.isRequired,
   setSelected: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired
+}
+
+Link.defaultProps = {
+  icon: 'FormSubtract'
 }
 
 export default Link

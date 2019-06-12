@@ -11,33 +11,34 @@ storiesOf('Navvy', module).add('Basic', () => (
       {
         heading: 'Navigation',
         links: [
-          { title: 'Dashboard' },
+          { icon: 'Dashboard', title: 'Dashboard' },
           {
+            icon: 'Template',
             title: 'Page layouts',
             handler: () => console.log('LOL')
           },
-          { title: 'Navigation' },
-          { title: 'Widget' }
+          { icon: 'Sidebar', title: 'Navigation' },
+          { icon: 'Apps', title: 'Widget' }
         ]
       },
       {
         heading: 'UI Element',
         links: [
-          { title: 'Basic' },
-          { title: 'Advance' },
-          { title: 'Extra' },
-          { title: 'Animations' },
-          { title: 'Icons' }
+          { icon: 'Add', title: 'Basic' },
+          { icon: 'Action', title: 'Advanced' },
+          { icon: 'Ad', title: 'Extra' },
+          { icon: 'ThreeD', title: 'Animations' },
+          { icon: 'Cubes', title: 'Icons' }
         ]
       },
       {
         heading: 'Forms',
         links: [
-          { title: 'Form' },
-          { title: 'Form Picker' },
-          { title: 'Form Select' },
-          { title: 'Form Masking' },
-          { title: 'Form Wizard' }
+          { icon: 'Document', title: 'Form' },
+          { icon: 'FormAdd', title: 'Form Picker' },
+          { icon: 'FormCheckmark', title: 'Form Select' },
+          { icon: 'FormFolder', title: 'Form Masking' },
+          { icon: 'Magic', title: 'Form Wizard' }
         ]
       }
     ]}
