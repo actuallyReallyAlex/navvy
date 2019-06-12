@@ -8,6 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
+    "test:watch": "jest --watchAll",
     "test:coveralls": "jest --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/hooks/**/* --collectCoverageFrom=!src/setupTests.js --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
