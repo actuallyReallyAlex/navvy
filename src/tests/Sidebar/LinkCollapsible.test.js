@@ -18,8 +18,29 @@ describe('<LinkCollapsible />', () => {
     defaultProps.setSelected.mockClear()
   })
 
-  test('Should render the <LinkCollapsible /> component.', () => {
+  test('Should render the <LinkCollapsible /> component as a non-selected Link with sidebar expanded.', () => {
     const component = shallow(<LinkCollapsible {...defaultProps} />)
+    expect(component).toMatchSnapshot()
+  })
+
+  test('Should render the <LinkCollapsible /> component as a non-selected Link with sidebar collapsed.', () => {
+    const component = shallow(
+      <LinkCollapsible {...defaultProps} size="collapsed" />
+    )
+    expect(component).toMatchSnapshot()
+  })
+
+  test('Should render the <LinkCollapsible /> component as a selected Link with sidebar expanded.', () => {
+    const component = shallow(
+      <LinkCollapsible {...defaultProps} selected="Title" />
+    )
+    expect(component).toMatchSnapshot()
+  })
+
+  test('Should render the <LinkCollapsible /> component as a selected Link with sidebar collapsed.', () => {
+    const component = shallow(
+      <LinkCollapsible {...defaultProps} selected="Title" size="collapsed" />
+    )
     expect(component).toMatchSnapshot()
   })
 

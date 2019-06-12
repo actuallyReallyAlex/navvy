@@ -2,4 +2,10 @@
 
 exports[`<LinkCollapsible /> Should call the link handler if the link is clicked. 1`] = `ShallowWrapper {}`;
 
-exports[`<LinkCollapsible /> Should render the <LinkCollapsible /> component. 1`] = `ShallowWrapper {}`;
+exports[`<LinkCollapsible /> Should render the <LinkCollapsible /> component as a non-selected Link with sidebar collapsed. 1`] = `ShallowWrapper {}`;
+
+exports[`<LinkCollapsible /> Should render the <LinkCollapsible /> component as a non-selected Link with sidebar expanded. 1`] = `ShallowWrapper {}`;
+
+exports[`<LinkCollapsible /> Should render the <LinkCollapsible /> component as a selected Link with sidebar collapsed. 1`] = `ShallowWrapper {}`;
+
+exports[`<LinkCollapsible /> Should render the <LinkCollapsible /> component as a selected Link with sidebar expanded. 1`] = `ShallowWrapper {}`;
