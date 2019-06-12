@@ -1,4 +1,5 @@
 import React from 'react'
+import { Image } from 'grommet'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
@@ -7,6 +8,7 @@ import Navvy from '../src/index.js'
 
 storiesOf('Navvy', module).add('Basic', () => (
   <Navvy
+    logo="D A S H B O A R D"
     sections={[
       {
         heading: 'Navigation',

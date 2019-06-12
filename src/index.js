@@ -5,13 +5,13 @@ import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 
 const Navvy = props => {
-  const { background, sections } = props
+  const { background, logo, sections } = props
   const [size, setSize] = useState('expanded') // or 'collapsed'
 
   return (
     <Grommet full theme={grommet}>
       <Box direction="row" fill>
-        <Sidebar background={background} sections={sections} size={size} />
+        <Sidebar background={background} logo={logo} sections={sections} size={size} />
         <Box fill>
           <Navbar setSize={setSize} size={size} />
           {props.children}
@@ -23,6 +23,7 @@ const Navvy = props => {
 
 Navvy.propTypes = {
   background: PropTypes.oneOf(['dark', 'light']),
+  logo: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   sections: PropTypes.array.isRequired
 }
 
