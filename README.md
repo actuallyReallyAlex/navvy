@@ -54,61 +54,50 @@ import Navvy from 'navvy'
 const App = () => {
   return (
     <Navvy
-      sections={[
-        {
-          heading: 'Navigation',
-          links: [
-            {
-              title: 'Dashboard'
-            },
-            {
-              title: 'Page layouts'
-            },
-            {
-              title: 'Navigation'
-            },
-            {
-              title: 'Widget'
-            }
-          ]
-        },
-        {
-          heading: 'UI Element',
-          links: [
-            {
-              title: 'Basic'
-            },
-            {
-              title: 'Advance'
-            },
-            {
-              title: 'Extra'
-            },
-            {
-              title: 'Animations'
-            },
-            {
-              title: 'Icons'
-            }
-          ]
-        }
-      ]}
-    >
-      <h1>thing 1</h1>
-      <h1>thing 2</h1>
-    </Navvy>
+    sections={[
+      {
+        heading: 'Navigation',
+        links: [
+          {
+            collapsible: true,
+            children: [
+              {
+                icon: 'Cube',
+                title: 'Child 1'
+              },
+              {
+                icon: 'Cubes',
+                title: 'Child 2'
+              }
+            ],
+            icon: 'Dashboard',
+            title: 'Dashboard'
+          },
+          {
+            icon: 'Template',
+            title: 'Page layouts'
+          },
+          { icon: 'Sidebar', title: 'Navigation' },
+          { icon: 'Apps', title: 'Widget' }
+        ]
+      }
+    ]}
+  >
+    {// Inner content }
+  </Navvy>
   )
 }
 
 export default App
 ```
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## ⛏️ Built Using <a name="built_using"></a>
 
 - [Grommet](https://v2.grommet.io/) - UI Framework
 - [React](https://reactjs.org/) - UI Framework
+- [react-custom-scrollbars](https://malte-wessel.com/react-custom-scrollbars/) - Sidebar Scrolling
 
-## ✏️ TODO
+## ✏️ TODO <a name="todo">
 
 - [x] Basic Skeleton.
 - [x] Ability to collapse/expand sidebar.
@@ -123,7 +112,7 @@ export default App
 
 - [Alex Lee](https://github.com/alexlee-dev) - Developer
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+## 🎉 Acknowledgements <a name="acknowledgement"></a>
 
 - Icon made by [Nikita Golubev](https://www.flaticon.com/authors/nikita-golubev) from [www.flaticon.com](https://www.flaticon.com/) and is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
 
