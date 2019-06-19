@@ -1,23 +1,21 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=256px height=256px src="https://github.com/alexlee-dev/pickitt/blob/master/documentation/images/pick.svg" alt="pickitt logo"></a>
+ <img width=256px height=256px src="https://github.com/alexlee-dev/navvy/raw/master/navvy.png" alt="Navvy logo"></a>
 </p>
 
-<h3 align="center">Pickitt</h3>
+<h3 align="center">Navvy</h3>
 
 <div align="center">
 
-[![NPM Version][npm-image]][npm-url] [![NPM Total Downloads][npm-downloads]][npm-url] [![npm bundle size (minified + gzip)][size-image]][npm-url] [![Coverage Status](https://coveralls.io/repos/github/alexlee-dev/pickitt/badge.svg?branch=master)](https://coveralls.io/github/alexlee-dev/pickitt?branch=master) [![Build Status](https://travis-ci.org/alexlee-dev/pickitt.svg?branch=master)](https://travis-ci.org/alexlee-dev/pickitt.svg?branch=master)
+[![NPM Version][npm-image]][npm-url] [![NPM Total Downloads][npm-downloads]][npm-url] [![npm bundle size (minified + gzip)][size-image]][npm-url] [![Coverage Status](https://coveralls.io/repos/github/alexlee-dev/navvy/badge.svg?branch=master)](https://coveralls.io/github/alexlee-dev/navvy?branch=master) [![Build Status](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)](https://travis-ci.org/alexlee-dev/navvy.svg?branch=master)
 
 </div>
 
 ---
 
-<p align="center"> When you need a computer to just pick it, reach for Pickitt!
+<p align="center"> A React Navbar/Sidebar combo component.
     <br> 
 </p>
-
-<div align="center">https://pickitt.netlify.com/</div>
 
 ## 📝 Table of Contents
 
@@ -25,35 +23,94 @@
 - [Installing](#installing)
 - [Usage](#usage)
 - [Built Using](#built_using)
+- [Todo](#todo)
 - [Author](#author)
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name="about"></a>
 
-Pickitt is a simple utility function designed to help you pick an element from an array.
+Navvy serves as a simple to use navbar/sidebar combo component. A fully featured navbar/sidebar is a common aspect of many dashboards and other websites; Navvy makes it easy to implement one on your own.
 
 ## 📦 Installing <a name="installing"></a>
 
 ### NPM
 
 ```sh
-npm install pickitt
+npm install navvy
 ```
 
 ### Yarn
 
 ```sh
-yarn add pickitt
+yarn add navvy
 ```
 
 ## 🎈 Usage <a name="usage"></a>
 
 ```js
-import { pickitt } from "pickitt";
+import React from 'react'
+import Navvy from 'navvy'
 
-const testArray = ["item1", "item2", "item3"];
+const App = () => {
+  return (
+    <Navvy
+      logo="D A S H B O A R D"
+      sections={[
+        {
+          heading: 'Navigation',
+          links: [
+            {
+              collapsible: true,
+              children: [
+                {
+                  icon: 'Cube',
+                  title: 'Child 1'
+                },
+                {
+                  icon: 'Cubes',
+                  title: 'Child 2'
+                }
+              ],
+              icon: 'Dashboard',
+              title: 'Dashboard'
+            },
+            {
+              icon: 'Template',
+              title: 'Page layouts',
+              handler: () => console.log('LOL')
+            },
+            { icon: 'Sidebar', title: 'Navigation' },
+            { icon: 'Apps', title: 'Widget' }
+          ]
+        },
+        {
+          heading: 'UI Element',
+          links: [
+            { icon: 'Add', title: 'Basic' },
+            { icon: 'Action', title: 'Advanced' },
+            { icon: 'Ad', title: 'Extra' },
+            { icon: 'ThreeD', title: 'Animations' },
+            { icon: 'Cubes', title: 'Icons' }
+          ]
+        },
+        {
+          heading: 'Forms',
+          links: [
+            { icon: 'Document', title: 'Form' },
+            { icon: 'FormAdd', title: 'Form Picker' },
+            { icon: 'FormCheckmark', title: 'Form Select' },
+            { icon: 'FormFolder', title: 'Form Masking' },
+            { icon: 'Magic', title: 'Form Wizard' }
+          ]
+        }
+      ]}
+    >
+      {Inner Content}
+    </Navvy>
+  )
+}
 
-const randomElement = pickitt(testArray); // <-- 'item1', 'item2', or 'item3'
+export default App
 ```
 
 ## ⛏️ Built Using <a name="built_using"></a>
@@ -62,17 +119,27 @@ const randomElement = pickitt(testArray); // <-- 'item1', 'item2', or 'item3'
 - [React](https://reactjs.org/) - UI Framework
 - [react-custom-scrollbars](https://malte-wessel.com/react-custom-scrollbars/) - Sidebar Scrolling
 
+## ✏️ TODO <a name="todo">
+
+- [x] Basic Skeleton.
+- [x] Ability to collapse/expand sidebar.
+- [x] Ability to make fullscreen.
+- [x] Ability to render collapsible links.
+- [x] Ability to render custom Logos.
+- [ ] Dark/Light Modes.
+- [ ] Ability to hook into Notifications.
+- [ ] Ability to hook into Settings.
+
 ## ✍️ Author <a name="author"></a>
 
 - [Alex Lee](https://github.com/alexlee-dev) - Developer
 
 ## 🎉 Acknowledgements <a name="acknowledgement"></a>
 
-- Pick Icon by [freepik](http://www.freepik.com) from [www.flaticon.com](www.flaticon.com).
-- Concept from [lodash/sample](https://www.npmjs.com/package/lodash.sample).
+- Icon made by [Nikita Golubev](https://www.flaticon.com/authors/nikita-golubev) from [www.flaticon.com](https://www.flaticon.com/) and is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
 
-[npm-image]: https://img.shields.io/npm/v/pickitt.svg
-[npm-downloads]: https://img.shields.io/npm/dt/pickitt.svg
-[npm-url]: https://www.npmjs.com/package/pickitt
-[size-image]: https://img.shields.io/bundlephobia/minzip/pickitt.svg
-[pickitt-icon]: https://github.com/alexlee-dev/pickitt/raw/master/pickitt.png
+[npm-image]: https://img.shields.io/npm/v/navvy.svg
+[npm-downloads]: https://img.shields.io/npm/dt/navvy.svg
+[npm-url]: https://www.npmjs.com/package/navvy
+[size-image]: https://img.shields.io/bundlephobia/minzip/navvy.svg
+[navvy-icon]: https://github.com/alexlee-dev/navvy/raw/master/navvy.png
